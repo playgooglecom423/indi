@@ -11,9 +11,10 @@
 				.then(response => response.json())
 				.then(data => {
 					if (data.country_code2 === 'UA') {
-						window.location.href = '/indi/mobile.html';
+						// Пользователь из Укр, остается на той же странице
 					} else {
-						window.location.href = 'https://www.google.com.ua/';
+						// Пользователь из другой страны, редирект на другую страницу
+						window.location.href = '/indi/mobile.html';
 					}
 				});
 		}
