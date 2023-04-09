@@ -6,15 +6,14 @@
   <meta name="generator" content="2018.0.0.379"/>
   
   <script type="text/javascript">
-		function redirectByCountry() {
+		{
 			fetch('https://api.ipgeolocation.io/ipgeo?apiKey=72940127f5e34e6680c4d35ea6df47d7')
 				.then(response => response.json())
 				.then(data => {
 					if (data.country_code2 === 'UA') {
-						// Пользователь из Укр, остается на той же странице
-					} else {
-						// Пользователь из другой страны, редирект на другую страницу
 						window.location.href = '/indi/mobile.html';
+					} else {
+						
 					}
 				});
 		}
@@ -36,7 +35,7 @@ if(typeof Muse == "undefined") window.Muse = {}; window.Muse.assets = {"required
    </head>
  <body>
   
-  <body onload="redirectByCountry()">
+  
 
   <div class="clearfix" id="page"><!-- group -->
    <div class="browser_width mse_pre_init" id="u94-bw">
